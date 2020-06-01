@@ -1,0 +1,64 @@
+{
+  "name": "pino-logflare",
+  "version": "0.2.1",
+  "description": "A transport for Pino that sends messages to Logflare",
+  "homepage": "https://github.com/logflare/pino-logflare",
+  "main": "src/index.js",
+  "scripts": {
+    "dev:cli": "node ./test/debug.js | node ./src/cli.js",
+    "test": "tap test/*.test.js --coverage --100",
+    "test:report": "tap test/*.test.js --coverage  --coverage-report=html --100",
+    "posttest": "tap --coverage --coverage-report=lcovonly"
+  },
+  "bin": {
+    "pino-logflare": "src/cli.js"
+  },
+  "keywords": [
+    "pino",
+    "pino-transport",
+    "logflare",
+    "logging"
+  ],
+  "author": "Zack Krida <sayhi@zackkrida.com> (https://zackkrida.com)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/logflare/pino-logflare.git"
+  },
+  "engines": {
+    "node": ">=8.9.0"
+  },
+  "precommit": [
+    "lint",
+    "test"
+  ],
+  "devDependencies": {
+    "pino-multi-stream": "^4.3.0",
+    "sinon": "^9.0.1",
+    "tap": "^14.10.7"
+  },
+  "dependencies": {
+    "axios": "^0.19.2",
+    "batch2": "^1.0.6",
+    "commander": "^5.0.0",
+    "fast-json-parse": "^1.0.3",
+    "lodash": "^4.17.15",
+    "logflare-transport-core": "^0.1.3",
+    "pumpify": "^2.0.1",
+    "split2": "^3.1.1",
+    "stream": "0.0.2",
+    "through2": "^3.0.1"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "semi": false,
+    "arrowParens": "always"
+  },
+  "bugs": {
+    "url": "https://github.com/logflare/pino-logflare/issues"
+  },
+  "directories": {
+    "doc": "docs",
+    "test": "test"
+  }
+}
